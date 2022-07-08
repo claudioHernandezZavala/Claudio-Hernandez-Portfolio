@@ -1,5 +1,6 @@
 body {
-  background-image: linear-gradient(25deg, black, black);
+  background-color: red;
+  /* background-image: linear-gradient(25deg, rgb(255, 248, 248), black); */
   margin: 0;
 }
 
@@ -12,14 +13,24 @@ main {
 #nameanddev {
   display: flex;
   flex-direction: column;
+  margin: 5px;
   justify-content: center;
 }
-header {
+#header {
   background-color: black;
   color: white;
-  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0%;
   overflow: hidden;
-  height: fit-content;
+  list-style: none;
+  height: 70px;
+}
+#header li{
+  display: inline;
+}
+#header li:hover{
+ color: #0da9e7;
 }
 .nameIntroduction {
   font-size: 35px;
@@ -32,12 +43,15 @@ h1,
 h2 {
   color: white;
 }
+#subhead{
+  margin-top: 85px;
+}
 footer {
   width: 100%;
   position: fixed;
   bottom: 0;
   color: white;
-  background-color: rgb(221, 3, 3);
+  background-color: rgb(35, 56, 153);
 }
 #technologies {
   height: 50vh;
@@ -209,6 +223,16 @@ h2 {
   transform: translateY(-50px);
   box-shadow: 4px 4px 35px 0px rgba(16, 235, 144, 0.75);
 }
+/* height medias */
+
+
+@media(max-height:850px){
+ body{
+  background-color: #0da9e7;
+ }
+}
+
+/* width queries */
 @media (min-width:640px)and (max-width: 1100px ) {
   #technologies {
     grid-template-columns: repeat(3, 150px);
@@ -244,14 +268,11 @@ h2 {
 
 }
 @media (min-width:0px)and (max-width: 640px ) {
-  header li {
+  #header li {
     display: block;
     margin-left: 5px;
   }
-  footer li {
-    display: block;
-    margin-left: 15px;
-  }
+  
   #claudio {
     max-width: 350px;
     max-height: 350px;

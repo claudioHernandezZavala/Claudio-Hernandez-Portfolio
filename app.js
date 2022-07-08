@@ -126,3 +126,5 @@ for (var i = 0; i < githubElements.length; i++) {
   img2.height = 45;
   githubElements[i].appendChild(img2);
 }
+const isMobile = navigator.userAgentData.mobile; 
+console.log(isMobile);
